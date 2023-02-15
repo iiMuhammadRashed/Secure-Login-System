@@ -1,0 +1,118 @@
+/*!General Styles Start*/
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.75em;
+  color: rgb(30, 30, 30);
+  background: #1488ea;
+}
+.innerBackground {
+  background-image: url(/images/joanna-kosinska-7ACuHoezUYk-unsplash.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.innerColor {
+  background-image: linear-gradient(120deg, #cde0fff2 0%, #96bdfcf2 100%);
+}
+
+.form-floating > .form-control {
+  padding-top: 1.9rem;
+  padding-bottom: 1rem;
+  background-color: #ffffffbf;
+  transition: 0.3s;
+}
+.form-floating > .form-control:focus {
+  padding-top: 1.9rem;
+  padding-bottom: 1rem;
+  background-color: #ffffff;
+}
+
+.form-control:focus {
+  border-color: #272727;
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0);
+}
+.alreadyHaveAccount span {
+  cursor: pointer;
+}
+.dontHaveAccount span {
+  cursor: pointer;
+}
+
+#card {
+  position: relative;
+  top: 110px;
+  width: 320px;
+  display: block;
+  margin: auto;
+  text-align: center;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+#upper-side {
+  padding: 2em;
+  background-color: #0d6efd;
+  display: block;
+  color: #fff;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+#checkmark {
+  font-weight: lighter;
+  fill: #fff;
+  margin: -3.5em auto auto 20px;
+}
+
+#status {
+  font-weight: lighter;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1em;
+  margin-top: -0.2em;
+  margin-bottom: 0;
+}
+
+#lower-side {
+  padding: 2em 2em 5em 2em;
+  background: #fff;
+  display: block;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+#message {
+  margin-top: -0.5em;
+  color: #757575;
+  letter-spacing: 1px;
+}
+
+#contBtn {
+  cursor: pointer;
+  border: none;
+  position: relative;
+  top: 1.5em;
+  text-decoration: none;
+  background: #0d6efd;
+  color: #fff;
+  margin: auto;
+  padding: 0.8em 3em;
+  -webkit-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
+  -moz-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
+  box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
+  border-radius: 25px;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+#contBtn:hover {
+  background: #0b5ed7;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 0.6rem;
+  }
+}

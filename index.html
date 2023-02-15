@@ -1,0 +1,217 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week8</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="innerBackground">
+      <div class="innerColor h-100 w-100">
+        <div class="container">
+          <div class="registerSection mx-auto text-center p-5 d-block">
+            <div class="formgroup p-3 border-secondary rounded-4 shadow-lg">
+              <div class="form_caption text-center">
+                <h2 class="p-4 fw-bold">Resister to Website Here</h2>
+              </div>
+              <div class="form_inputs m-3 p-2">
+                <div class="form-floating my-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="userName"
+                    placeholder="Username"
+                  />
+                  <label for="userName">Username</label>
+                  <div class="nameError">
+                    <p class="text-danger text-start mx-1 d-none">
+                      <span class="mx-1"
+                        ><i class="fa-light fa-circle-exclamation"></i
+                      ></span>
+                      Invalid Username
+                    </p>
+                  </div>
+                  <div class="repeatNameError">
+                    <p class="text-danger text-start mx-1 d-none">
+                      <span class="mx-1"
+                        ><i class="fa-light fa-circle-exclamation"></i
+                      ></span>
+                      Username is already used.
+                    </p>
+                  </div>
+                </div>
+                <div class="form-floating my-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="userEmail"
+                    placeholder="Email address"
+                  />
+                  <label for="userEmail">Email address</label>
+                  <div class="emailError">
+                    <p class="text-danger text-start mx-1 d-none">
+                      <span class="mx-1"
+                        ><i class="fa-light fa-circle-exclamation"></i
+                      ></span>
+                      Invalid Email Address
+                    </p>
+                  </div>
+                  <div class="repeatEmailError">
+                    <p class="text-danger text-start mx-1 d-none">
+                      <span class="mx-1"
+                        ><i class="fa-light fa-circle-exclamation"></i
+                      ></span>
+                      Email is already used.
+                    </p>
+                  </div>
+                </div>
+                <div class="form-floating my-3">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="userPassword"
+                    placeholder="Password"
+                  />
+                  <label for="userPassword">Password</label>
+                  <div class="wrongPassword">
+                    <p class="text-danger text-start mx-1 d-none">
+                      <span class="mx-1"
+                        ><i class="fa-light fa-circle-exclamation"></i
+                      ></span>
+                      Password must contain 8-16 characters and number and
+                      uppercase letters
+                    </p>
+                  </div>
+                </div>
+                <button
+                  class="btn btn-primary my-2 form-control d-block"
+                  id="RegisterBtn"
+                >
+                  Register
+                </button>
+                <div class="alreadyHaveAccount">
+                  <p class="mx-1">
+                    Already have an account ?
+                    <span class="mx-1 text-primary">Login here</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="card" class="animated fadeIn d-none">
+            <div id="upper-side">
+              <?xml version="1.0" encoding="utf-8"?>
+              <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+              <svg
+                version="1.1"
+                id="checkmark"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                xml:space="preserve"
+              >
+                <path
+                  d="M131.583,92.152l-0.026-0.041c-0.713-1.118-2.197-1.447-3.316-0.734l-31.782,20.257l-4.74-12.65
+            c-0.483-1.29-1.882-1.958-3.124-1.493l-0.045,0.017c-1.242,0.465-1.857,1.888-1.374,3.178l5.763,15.382
+            c0.131,0.351,0.334,0.65,0.579,0.898c0.028,0.029,0.06,0.052,0.089,0.08c0.08,0.073,0.159,0.147,0.246,0.209
+            c0.071,0.051,0.147,0.091,0.222,0.133c0.058,0.033,0.115,0.069,0.175,0.097c0.081,0.037,0.165,0.063,0.249,0.091
+            c0.065,0.022,0.128,0.047,0.195,0.063c0.079,0.019,0.159,0.026,0.239,0.037c0.074,0.01,0.147,0.024,0.221,0.027
+            c0.097,0.004,0.194-0.006,0.292-0.014c0.055-0.005,0.109-0.003,0.163-0.012c0.323-0.048,0.641-0.16,0.933-0.346l34.305-21.865
+            C131.967,94.755,132.296,93.271,131.583,92.152z"
+                />
+                <circle
+                  fill="none"
+                  stroke="#ffffff"
+                  stroke-width="5"
+                  stroke-miterlimit="10"
+                  cx="109.486"
+                  cy="104.353"
+                  r="32.53"
+                />
+              </svg>
+              <h3 id="status">Success</h3>
+            </div>
+            <div id="lower-side">
+              <p id="message">
+                Congratulations, your account has been successfully created.
+              </p>
+              <button id="contBtn">Continue</button>
+            </div>
+          </div>
+
+          <div class="loginSection mx-auto text-center p-5 d-none">
+            <div class="formgroup p-3 border-secondary rounded-4 shadow-lg">
+              <div class="form_caption text-center">
+                <h2 class="p-4 fw-bold">Login to Website Here</h2>
+              </div>
+              <div class="form_inputs m-3 p-2">
+                <div class="form-floating my-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="loginUserEmail"
+                    placeholder="Email address"
+                  />
+                  <label for="userEmail">Email address</label>
+                  <div class="emailError">
+                    <p class="text-danger text-start mx-1 d-none">
+                      <span class="mx-1"
+                        ><i class="fa-light fa-circle-exclamation"></i
+                      ></span>
+                      Wrong Email Address
+                    </p>
+                  </div>
+                </div>
+                <div class="form-floating my-3">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="loginUserPassword"
+                    placeholder="Password"
+                  />
+                  <label for="userPassword">Password</label>
+                  <div class="wrongPassword">
+                    <p class="text-danger text-start mx-1 d-none">
+                      <span class="mx-1"
+                        ><i class="fa-light fa-circle-exclamation"></i
+                      ></span>
+                      Wrong password
+                    </p>
+                  </div>
+                </div>
+                <button
+                  class="btn btn-primary my-2 form-control d-block"
+                  id="loginBtn"
+                >
+                  Login
+                </button>
+                <div class="dontHaveAccount">
+                  <p class="mx-1">
+                    Don't have an account ?
+                    <span class="mx-1 text-primary">Register here</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="welcomeMessage text-center text-primary vh-100 d-none justify-content-center align-items-center"
+          >
+            <div class="welcomeSection">
+              <div class="welcomeCaption  my-5"><h1></h1></div>
+              <div class="LogoutBtn">
+                <button class="btn btn-outline-primary" id="logoutBtn">Logout</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
