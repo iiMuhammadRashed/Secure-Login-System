@@ -197,7 +197,6 @@ function loginCheck() {
     document
       .querySelector(".welcomeMessage")
       .classList.replace("d-none", "d-flex");
-      console.log(sessionStorage.getItem("UserName"));
     document.querySelector(
       ".welcomeCaption h1"
     ).innerHTML = `Welcome , ${sessionStorage.getItem("UserName")}`;
@@ -208,7 +207,6 @@ function checkEmail() {
   for (var i = 0; i < usersData.length; i++) {
     if (usersData[i].email == loginUserEmail.value) {
       sessionStorage.setItem("UserName", usersData[i].name);
-      console.log(usersData[i].email == loginUserEmail.value);
       return usersData[i].email == loginUserEmail.value;
     }
   }
@@ -216,7 +214,6 @@ function checkEmail() {
 function checkPassword() {
   for (var i = 0; i < usersData.length; i++) {
     if (usersData[i].password == loginUserPassword.value) {
-      console.log(usersData[i].password == loginUserPassword.value);
       return usersData[i].password == loginUserPassword.value;
     }
   }
